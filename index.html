@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calculá tus ganancias</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>Calculá tus ganancias</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="cotenido">
+                    <h3 class="expicacion">
+                        Con esta herramienta vas a poder calcular cuanto dinero necesitas tener en el fondo común de
+                        inversión de tu banco preferido para poder tener una rentabilidad al mes.
+                        Esto se utiliza para poder pagar expensas, gimnacio, servicios o incluso un alquiler, solamente
+                        con rentabilidades mensuales o por día.
+                        <br><br>
+                        Por Ejemplo: Necesitas $5000 todos los meses para pagar el gimnacio.
+                        <br>
+                        Necesitas $400 para tomarte un café todos los días.
+                        <br><br>
+                        Averigúa cuanto dinero necesitas tener en el fondo de inversión para generar esto al mes o por
+                        día.
+                        <br><br>
+                    </h3>
+                    <div class="campos">
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-6" for="deposito">Ganancia al mes</label>
+                            <div class="input-group col-sm-6">
+                                <input id="deposito" class="form-control" type="number" placeholder="Ej: 20000">
+                                <!-- required -->
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Banco</label>
+                            <select id="selector" name="selector" required>
+                                <option selected disabled value="selecciona">Selecciona tu banco...</option>
+                                <option value="plazof">Plazo Fijo</option>
+                                <option value="mPago">MercadoPago</option>
+                                <option value="ualaa">Uala</option>
+                                <option value="narjX">Naranja X</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-6" for="duracion">Plazo de tiempo</label>
+                            <div class="input-group col-sm-6">
+                                <input id="duracion" class="form-control" type="number"
+                                    placeholder="Ingresa cantidad de días" required>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-6" for="duracion">Capital Final:</label>
+                            <div class="input-group col-sm-6">
+                                <input id="calc_result" value="0.00" readony="readonly" disabled="disabled"
+                                    class="form-control" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
