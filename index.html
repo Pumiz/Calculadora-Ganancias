@@ -2,59 +2,91 @@
 <html lang="en">
 
 <head>
-    <title>Calculá tus ganancias</title>
+    <title>Viví del rendimiento</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/beneficios.png">
 
     <link rel="stylesheet" href="estilos.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="scripts.js"></script>
+
+    <style>
+        #ultimo + div{
+            visibility: hidden;
+        }
+    </style>
+
 </head>
 
 <body>
     <div class="container">
-        <header>Calculá tus ganancias</header>
+        <header>Calculá tu rendimiento</header>
 
         <form action="#">
             <div class="form first">
                 <div class="cotenido">
                     <h3 class="expicacion">
-                        Con esta herramienta vas a poder calcular cuanto dinero necesitas tener en el fondo común de
-                        inversión de tu banco preferido para poder tener una rentabilidad al mes.
-                        Esto se utiliza para poder pagar expensas, gimnacio, servicios o incluso un alquiler, solamente
-                        con rentabilidades mensuales o por día.
-                        <br><br>
-                        Por Ejemplo:
-                        <br>
-                        Necesitas $5000 todos los meses para pagar el gimnacio.
-                        <br>
-                        Necesitas $400 para tomarte un café todos los días.
-                        <br><br>
-                        Averigúa cuanto dinero necesitas tener en el fondo de inversión para generar esto al mes o por
-                        día.
-                        <br><br>
+                        Con esta herramienta podes calcular el dinero necesitas tener en el fondo común de
+                        inversión de tu banco o billetera virtual para poder tener una rentabilidad mesual, semanal o por día.
                     </h3>
+                    <br>
+
+                    <button id="open">
+                        Leer más
+                    </button>
+                    <br><br>
+
+                    <div id="modal_container" class="modal-container">
+                        <div class="modal">
+                            <h1>¿Cómo funciona?</h1>
+                            <br>
+                            <p>
+                                Esto se utiliza para poder pagar expensas, gimnasio, servicios o incluso un alquiler,
+                                solamente
+                                con rentabilidades mensuales o por día.
+                                <br><br>
+                                Por Ejemplo:
+                                <br>
+                                Necesitas $5000 todos los meses para pagar el gimnasio.
+                                <br>
+                                Necesitas $400 todos los días para tomarte un café.
+                                <br>
+                                Necesitas $4500 todas las semanas para el supermercado.
+                                <br><br>
+                                Averigúa cuanto dinero necesitas tener en el fondo de inversión para generar esto al mes
+                                o por
+                                día.
+                                <br><br>
+                            </p>
+                            <button id="close">Cerrar</button>
+                        </div>
+                    </div>
+
+
+
                     <div class="campos">
 
                         <div class="form-group">
                             <label class="control-label col-sm-6" for="deposito">Ganancia al mes</label>
                             <div class="input-group col-sm-6">
                                 <input id="deposito" class="form-control" type="number" placeholder="Ej: 20000">
-                                <!-- required -->
+                                <!-- -->
                             </div>
                         </div>
 
 
                         <div class="form-group">
                             <label>Banco</label>
-                            <select id="selector" name="selector" required>
+                            <select id="selector" name="selector">
                                 <option selected disabled value="selecciona">Selecciona tu banco...</option>
-                                <option value="plazof">Plazo Fijo</option>
+                                <option value="plazof">Plazo Fijo Tradicional</option>
                                 <option value="mPago">MercadoPago</option>
                                 <option value="ualaa">Uala</option>
                                 <option value="narjX">Naranja X</option>
+                                <option value="pPay">Personal Pay</option>
                             </select>
                         </div>
 
@@ -63,7 +95,7 @@
                             <label class="control-label col-sm-6" for="duracion">Plazo de tiempo</label>
                             <div class="input-group col-sm-6">
                                 <input id="duracion" class="form-control" type="number"
-                                    placeholder="Ingresa cantidad de días" required>
+                                    placeholder="Ingresa cantidad de días">
                             </div>
                         </div>
 
@@ -82,6 +114,19 @@
             </div>
         </form>
     </div>
+    <script>const open = document.getElementById('open');
+        const modal_container = document.getElementById('modal_container');
+        const close = document.getElementById('close');
+
+        open.addEventListener('click', () => {
+            modal_container.classList.add('show');
+        });
+
+        close.addEventListener('click', () => {
+            modal_container.classList.remove('show');
+        });</script>
+
+        <div id="ultimo"></div>
 </body>
 
 </html>

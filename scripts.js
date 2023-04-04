@@ -15,6 +15,9 @@ $(document).ready(function(){
         if(Seleccionar.value == 'narjX'){
             tna = 0.178;
         }
+		if(Seleccionar.value == 'pPay'){
+            tna = 0.175;
+        }
 
 
         var deposito = $("#deposito").val(),
