@@ -1,15 +1,15 @@
-
-
 /* ===== Google Font Import - Poppins ===== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    min-height: 100vh;
+
+body {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,29 +25,29 @@ button {
     font-size: 14px;
     padding: 10px 25px;
     align-items: center;
-  }
-  
-  .modal-container {
+}
+
+.modal-container {
     display: flex;
     background-color: rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-content: center;
     position: fixed;
     pointer-events: none;
-    opacity: 0;  
+    opacity: 0;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
     transition: opacity 0.4s ease;
-  }
-  
-  .show {
+}
+
+.show {
     pointer-events: auto;
     opacity: 1;
-  }
-  
-  .modal {
+}
+
+.modal {
     background-color: #fff;
     width: 600px;
     max-width: 100%;
@@ -55,20 +55,20 @@ button {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
-  }
-  
-  .modal h1 {
+}
+
+.modal h1 {
     margin: 0;
-  }
-  
-  .modal p {
+}
+
+.modal p {
     opacity: 0.7;
     font-size: 18px;
-  }
+}
 
 /* Cerar */
 
-.container{
+.container {
     position: relative;
     max-width: 900px;
     width: 100%;
@@ -76,15 +76,17 @@ button {
     padding: 30px;
     margin: 0 15px;
     background-color: #fff;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-.container header{
+
+.container header {
     position: relative;
     font-size: 25px;
     font-weight: 600;
     color: #333;
 }
-.container header::before{
+
+.container header::before {
     content: "";
     position: absolute;
     left: 0;
@@ -94,7 +96,8 @@ button {
     border-radius: 10px;
     background-color: #4070f4;
 }
-.container form{
+
+.container form {
     position: relative;
     margin-top: 16px;
     min-height: 355px;
@@ -102,24 +105,26 @@ button {
     overflow: hidden;
 }
 
-.container form .form{
+.container form .form {
     position: absolute;
     background-color: #fff;
     transition: 0.3s ease;
 }
 
 
-form.secActive .form.first{
+form.secActive .form.first {
     opacity: 0;
     pointer-events: none;
     transform: translateX(-100%);
 }
-h3{
+
+h3 {
     font-size: 17px;
     font-weight: 400;
-    color: #2e2e2e; 
+    color: #2e2e2e;
 }
-.container form .title{
+
+.container form .title {
     display: block;
     margin-bottom: 8px;
     font-size: 16px;
@@ -127,29 +132,35 @@ h3{
     margin: 6px 0;
     color: #333;
 }
-.container form .campos{
+
+.container form .campos {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-form .campos .form-group{
+
+form .campos .form-group {
     display: flex;
     width: calc(100% / 3 - 18px);
     flex-direction: column;
     margin: 5px 0;
 }
-.form-group label{
+
+.form-group label {
     font-size: 21px;
     font-weight: 500;
-    color: #2e2e2e; 
+    color: #2e2e2e;
 }
-.form-group p{
+
+.form-group p {
     font-size: 21px;
     font-weight: 600;
-    color: #2e2e2e; 
+    color: #2e2e2e;
 }
-.form-group input, select{
+
+.form-group input,
+select {
     outline: none;
     font-size: 18px;
     font-weight: 400;
@@ -160,19 +171,22 @@ form .campos .form-group{
     height: 50px;
     margin: 8px 0;
 }
+
 .form-group input :focus,
-.form-group select:focus{
-    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+.form-group select:focus {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
 }
+
 .form-group select,
-.form-group input[type="date"]{
+.form-group input[type="date"] {
     color: #707070;
 }
-.form-group input[type="date"]:valid{
+
+.form-group input[type="date"]:valid {
     color: #333;
 }
 
-.container form{
+.container form {
     font-size: 14px;
     font-weight: 400;
 }
@@ -180,31 +194,56 @@ form .campos .form-group{
 
 
 @media (max-width: 750px) {
-    .container form{
+    .container form {
         overflow-y: scroll;
     }
-    .container form::-webkit-scrollbar{
-       display: none;
-    }
-    form .campos .form-group{
-        width: calc(100% / 2 - 15px);
-    }
-    .container form{
-        height: 450px;
-    }
-    .form-group input, select{
-        height: 50px;  /* ancho */ 
-        width: 250px;  /* largo */
+
+    .container form::-webkit-scrollbar {
+        display: none;
     }
 
-    .modal {
-        width: 450px;
+    form .campos .form-group {
+        width: calc(100% / 2 - 15px);
+    }
+
+    .container form {
+        height: 550px;
+        padding-top: 5px;
+    } 
+    .modal{
+        height: 55  0px;
+    }
+    .h3{
+        font-size: 12px;
+    }
+    
+
+    .form-group input,
+    select {
+        height: 50px;
+        /* ancho */
+        width: 250px;
+        /* largo */
+    }
+
+    .body {
+        min-height: 10px;
     }
 
 }
 
 @media (max-width: 550px) {
-    form .campos .form-group{
+    form .campos .form-group {
         width: 100%;
     }
+
+    .container header::before {
+        width: 160px;
+    }
+
+    
+    .container form {
+        height: 550px;
+        padding-top: 5px;
+    } 
 }
