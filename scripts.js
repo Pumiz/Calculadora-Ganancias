@@ -4,19 +4,19 @@ $(document).ready(function(){
         var Seleccionar = document.getElementById('selector');
         var tna=0;
         if(Seleccionar.value == 'mPago'){
-            tna = 0.202;
+            tna = 0.20246;
         }
         if(Seleccionar.value == 'plazof'){
-            tna = 0.265;
+            tna = 0.26575;
         }
         if(Seleccionar.value == 'ualaa'){
-            tna = 0.211;
+            tna = 0.21139;
         }
         if(Seleccionar.value == 'narjX'){
-            tna = 0.202;
+            tna = 0.20273;
         }
 		if(Seleccionar.value == 'pPay'){
-            tna = 0.175;
+            tna = 0.17569;
         }
 
 
