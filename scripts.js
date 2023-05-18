@@ -4,16 +4,16 @@ $(document).ready(function(){
         var Seleccionar = document.getElementById('selector');
         var tna=0;
         if(Seleccionar.value == 'mPago'){
-            tna = 0.176;
+            tna = 0.202;
         }
         if(Seleccionar.value == 'plazof'){
-            tna = 0.213;
+            tna = 0.265;
         }
         if(Seleccionar.value == 'ualaa'){
-            tna = 0.176;
+            tna = 0.211;
         }
         if(Seleccionar.value == 'narjX'){
-            tna = 0.178;
+            tna = 0.202;
         }
 		if(Seleccionar.value == 'pPay'){
             tna = 0.175;
