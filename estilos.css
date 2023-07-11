@@ -92,7 +92,7 @@ button {
     left: 0;
     bottom: -2px;
     height: 3px;
-    width: 295px;
+    width: 293px;
     border-radius: 10px;
     background-color: #4070f4;
 }
@@ -100,7 +100,7 @@ button {
 .container form {
     position: relative;
     margin-top: 16px;
-    min-height: 355px;
+    min-height: 375px;
     background-color: #fff;
     overflow: hidden;
 }
@@ -191,12 +191,15 @@ select {
     font-weight: 400;
 }
 
-
-
 @media (max-width: 750px) {
     .container form {
         overflow-y: scroll;
     }
+
+    .container header::before {
+        width: 350px;
+    }
+
 
     .container form::-webkit-scrollbar {
         display: none;
@@ -209,14 +212,16 @@ select {
     .container form {
         height: 550px;
         padding-top: 5px;
-    } 
-    .modal{
-        height: 55  0px;
     }
-    .h3{
+
+    .modal {
+        height: 55 0px;
+    }
+
+    .h3 {
         font-size: 12px;
     }
-    
+
 
     .form-group input,
     select {
@@ -238,12 +243,12 @@ select {
     }
 
     .container header::before {
-        width: 160px;
+        width: 350px;
     }
 
-    
+
     .container form {
         height: 550px;
         padding-top: 5px;
-    } 
+    }
 }

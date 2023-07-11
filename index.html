@@ -14,7 +14,7 @@
     <script src="scripts.js"></script>
 
     <style>
-        #ultimo + div{
+        #ultimo+div {
             visibility: hidden;
         }
     </style>
@@ -30,7 +30,8 @@
                 <div class="cotenido">
                     <h3 class="expicacion">
                         Con esta herramienta podes calcular el dinero necesitas tener en el fondo común de
-                        inversión de tu banco o billetera virtual para poder tener una rentabilidad mesual, semanal o por día.
+                        inversión de tu banco o billetera virtual para poder tener la rentabilidad mesual, semanal o
+                        por día que necesites.
                     </h3>
                     <br>
 
@@ -67,13 +68,12 @@
                             <label class="control-label col-sm-6" for="deposito">Rendimiento deseado</label>
                             <div class="input-group col-sm-6">
                                 <input id="deposito" class="form-control" type="number" placeholder="Ej: 20000">
-                                <!-- -->
                             </div>
                         </div>
 
 
                         <div class="form-group">
-                            <label>Banco</label>
+                            <label>Banco / Billetera</label>
                             <select id="selector" name="selector">
                                 <option selected disabled value="selecciona">Selecciona tu banco...</option>
                                 <option value="plazof">Plazo Fijo Tradicional</option>
@@ -95,7 +95,7 @@
 
 
                         <div class="form-group">
-                            <label class="control-label col-sm-6" for="duracion">Capital Final:</label>
+                            <label class="control-label col-sm-6" for="duracion">Capital Necesaria:</label>
                             <div class="input-group col-sm-6">
                                 <input id="calc_result" value="0.00" readony="readonly" disabled="disabled"
                                     class="form-control" />
@@ -120,7 +120,7 @@
             modal_container.classList.remove('show');
         });</script>
 
-        <div id="ultimo"></div>
+    <div id="ultimo"></div>
 </body>
 
 </html>
