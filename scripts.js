@@ -6,10 +6,10 @@ $(document).ready(function () {
 		var ena = 0;
 		if (Seleccionar.value == 'mPago') {
 			tna = 0.22246575;
-
+			ena = 0;
 		}
 		if (Seleccionar.value == 'plazof') {
-			tna = 0.26575342;
+			tna = 0.32328767;
 			ena = 1;
 		}
 		if (Seleccionar.value == 'ualaa') {
@@ -27,12 +27,13 @@ $(document).ready(function () {
 
 		var deposito = $("#deposito").val();
 		if (ena == 1) {
-			var duracion = $("#duracion").val(30);
+			var plazo = $("#duracion").val(30);
 		} else if (ena == 0){
-			var duracion = $("#duracion").val();
+			var plazo = $("#duracion").val();
 		}
-		var flag = deposito != '' && tna != '' && duracion != '';
-		flag1 = !isNaN(parseFloat(deposito)) && !isNaN(parseFloat(tna)) && isNaN(parseFloat(duracion));
+		var plazo = $("#duracion").val();
+		var flag = deposito != '' && tna != '' && plazo != '';
+		flag1 = !isNaN(parseFloat(deposito)) && !isNaN(parseFloat(tna)) && !isNaN(parseFloat(plazo));
 
 		if (flag) {
 
@@ -47,7 +48,7 @@ $(document).ready(function () {
 			}
 			else {
 				//var cf = deposito * (1 + (tna / 100) * (duracion / 365));
-				var cf = ((deposito / tna) * 100) / duracion;
+				var cf = ((deposito / tna) * 100) / plazo;
 
 
 				if (cf >= 0) {
